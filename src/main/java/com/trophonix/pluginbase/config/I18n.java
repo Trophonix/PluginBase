@@ -56,10 +56,9 @@ public class I18n {
    */
   public String getLanguage(CommandSender sender) {
     if (sender instanceof Player) {
-      String locale = ((Player) sender).spigot().getLocale().toLowerCase();
-      return locale;
+      return ((Player) sender).getLocale().toLowerCase();
     }
-    return null;
+    return defaultLanguage;
   }
 
   /**
